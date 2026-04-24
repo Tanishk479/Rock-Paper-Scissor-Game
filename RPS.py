@@ -1,12 +1,6 @@
+import random
+from utils import outcomes, emoji
 
-#ROCK PAPER SCISSORS GAME
-import random   
-outcomes = ["rock", "paper", "scissors"]
-emoji = {
-    "rock": "🪨",
-    "paper": "📄",
-    "scissors": "✂️"
-}
 def rock_paper_scissors():
     while True:
         user = input("\nEnter rock, paper, or scissors: ").lower()
@@ -28,21 +22,3 @@ def rock_paper_scissors():
             again = input("Do you want to play again? (y/n): ").lower()
             if again == 'n':
                 break
-
-#menu
-def game():
-    while True:
-        print("\n====WELCOME TO THE ROCK-PAPER-SCISSORS GAME====")
-        print("👉 1. Start Game")
-        print("👉 2. Exit")
-        choice = input("Enter your choice: ")
-        if choice == '1':
-            print("Starting the game...")
-            rock_paper_scissors()
-        elif choice == '2':
-            print("Goodbye!👋")
-            break
-        else:
-            print("Invalid choice. Please try again.")
-
-game()

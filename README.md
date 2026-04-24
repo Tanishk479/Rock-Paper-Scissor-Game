@@ -1,9 +1,9 @@
-# 🎮 Rock Paper Scissors Game (Python)
+# 🎮 Rock Paper Scissors Game (Python - Modular Architecture)
 
 ## 🔹 Overview
 
 This is a Command-Line Interface (CLI) based Rock Paper Scissors game built using Python.
-The user plays against the computer, and the result is decided based on standard game rules.
+The project follows a **modular architecture**, where the game logic, utility functions, and main execution are separated into different files for better organization and scalability.
 
 ---
 
@@ -11,9 +11,23 @@ The user plays against the computer, and the result is decided based on standard
 
 * 🎯 Play against computer (random choice)
 * 🔁 Replay option after each round
-* ⚠️ Input validation for user entries
+* ⚠️ Input validation for user input
 * 🎨 Emoji-based output for better user experience
-* 🧠 Simple and clean game logic
+* 🧩 Modular code structure
+
+---
+
+## 🔹 Project Structure
+
+```
+Rock-Paper-Scissors/
+│
+├── MAIN.py        # Entry point (menu + control flow)
+├── RPS.py         # Game logic (rules + winner decision)
+├── utils.py       # Helper functions (display, validation, etc.)
+├── README.md
+└── .gitignore
+```
 
 ---
 
@@ -26,10 +40,11 @@ The user plays against the computer, and the result is decided based on standard
 
 ## 🔹 How It Works
 
-* User enters **rock, paper, or scissors**
+* User selects **rock, paper, or scissors**
 * Computer randomly selects one option
-* Game compares both choices and displays result
-* User can choose to play again
+* Game logic (in `RPS.py`) determines the winner
+* `utils.py` handles helper operations like formatting output
+* `MAIN.py` controls the game flow and user interaction
 
 ---
 
@@ -42,7 +57,7 @@ The user plays against the computer, and the result is decided based on standard
    cd Rock-Paper-Scissors
 
 3. Run the program:
-   python game.py
+   python MAIN.py
 
 ---
 
@@ -54,11 +69,22 @@ Result: You win! 🎉
 
 ---
 
+## 🔹 Key Learning Outcomes
+
+* Modular programming in Python
+* Separation of concerns (logic, utilities, control flow)
+* Use of random module
+* CLI-based game development
+* Git & GitHub workflow
+
+---
+
 ## 🔹 Future Improvements
 
-* Add score tracking system
-* Add best-of-3 or best-of-5 rounds
-* Create GUI version using Tkinter
+* Add score tracking system 📊
+* Add best-of-3 / best-of-5 mode 🎯
+* Build GUI version using Tkinter 🖥️
+* Store game history 📁
 
 ---
 
